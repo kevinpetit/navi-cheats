@@ -1,0 +1,28 @@
+% gcloud
+
+# Intitiate gcloud
+gcloud init
+
+# Authenticate
+gcloud auth login
+
+# Authenticate without launching a browser
+gloud auth login --no-launch-browser
+
+# Set and login application-default
+glcoud auth application-default login
+
+# Get credentials for a cluster
+gcloud container clusters get-credentials <cluster> --zone <zone>
+
+# Authentication with oauth token to a repository
+gcloud auth print-access-token | docker login -u oauth2accesstoken --password-stdin europe-docker.pkg.dev
+
+# Install a gcloud component
+gcloud components install <component>
+
+# Update gcloud components
+gcloud components Update
+
+# Connect using an SSH tunnel via a jumphost.
+gcloud compute ssh --ssh-flag="-L 8888:localhost:8888" --zone="europe-west1-b" "dp-jumphost"
