@@ -22,7 +22,7 @@ gcloud auth print-access-token | docker login -u oauth2accesstoken --password-st
 gcloud components install <component>
 
 # Update gcloud components
-gcloud components Update
+gcloud components update
 
 # Connect using an SSH tunnel via a jumphost.
 gcloud compute ssh --ssh-flag="-L 8888:localhost:8888" --zone="europe-west1-b" "dp-jumphost"
