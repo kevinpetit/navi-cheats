@@ -1,0 +1,32 @@
+% k3d
+; based on original cheatsheet by denisidoro: https://github.com/denisidoro/cheats/blob/master/container/k3d.cheat
+
+# Create a single k3s cluster in docker containers
+k3d cluster create --name <cluster_name>
+
+# Create a multi-node k3s cluster in docker containers
+k3d cluster create --name <name> --agents <worker_count>
+
+# Delete cluster
+k3d cluster delete --name <cluster_name>
+
+# Stop cluster
+k3d cluster stop --name <cluster_name>
+
+# Start a stopped cluster
+k3d cluster start --name <cluster_name>
+
+# List all clusters
+k3d cluster list
+
+# Get kubeconfig location for cluster
+k3d kubeconfig get --name <cluster_name>
+
+# Import a comma- or space-separated list of container images from your local docker daemon into the cluster
+k3d image-import
+
+# List nodes
+k3d node list
+
+# Show a list of commands or help for one command
+k3d help
